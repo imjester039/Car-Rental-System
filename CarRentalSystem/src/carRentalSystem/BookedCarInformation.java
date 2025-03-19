@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class BookedCarInformation implements Serializable {
-	private static final long serialVersionUID = 1L; // Khuyến nghị thêm serialVersionUID
+	private static final long serialVersionUID = 1L; // Thêm serialVersionUID 
 	private Car car;
 	private Customer customer;
 	private int days;
@@ -16,8 +16,8 @@ public class BookedCarInformation implements Serializable {
 		this.car = car;
 		this.customer = customer;
 		this.days = days;
-		this.rentDate = LocalDateTime.now(); // Ghi lại thời gian thuê
-		this.returnDate = rentDate.plusDays(days); // Mặc định khi chưa trả xe
+		this.rentDate = LocalDateTime.now(); 
+		this.returnDate = rentDate.plusDays(days); 
 	}
 
 	public Car getCar() {
@@ -44,7 +44,7 @@ public class BookedCarInformation implements Serializable {
 		this.returnDate = returnDate;
 	}
 
-	// Hiển thị thông tin thời gian dễ đọc
+	
 	public String formatDateTime(LocalDateTime dateTime) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		return dateTime != null ? dateTime.format(formatter) : "Not Returned";
