@@ -20,7 +20,7 @@ public class Review implements Serializable {
 		this.rating = rating;
 		this.comment = comment;
 		this.reviewDate = reviewDate;
-		this.returnDate = returnDate; // Khởi tạo returnDate
+		this.returnDate = returnDate;
 	}
 
 	@Override
